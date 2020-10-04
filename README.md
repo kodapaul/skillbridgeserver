@@ -8,7 +8,8 @@ Contributor:
 # Set Up
 - Step 1: clone Repository
 - Step 2: On terminal inside directory run "composer Install"
-- Step 3: To run the app php -S localhost:8000 -t public
+- Step 3: Copy .envexample in .env
+- Step 4: To run the app php -S localhost:8000 -t public
 
 
 
