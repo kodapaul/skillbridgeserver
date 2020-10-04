@@ -23,7 +23,7 @@ Git or Version Control:
 - To check current branch run "git branch"
 - To check all remote branches run "git branch -a"
 - To pull a branch run "git checkout <branch-name>" or git checkout admin/200-name-of-task
-- Before committing a branch make sure you merge it with master. E.G. on branch 120. "git merge"
+- Before committing a branch make sure you merge it with master. E.G. on branch 120. "git merge master"
 - After commiting and push a branch to remote, create a pull request and add thepauldv as a reviewer
 
 Coding with Lumen:
