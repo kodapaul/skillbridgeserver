@@ -14,10 +14,10 @@ class CreatePartnerUsersTable extends Migration
     public function up()
     {
         Schema::create('partner_users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('username', 20)->unique();
             $table->string('email', 100)->unique();
-            $table->string('password', 30)->unique();
+            $table->string('password', 100);
             $table->tinyInteger('approved');
             $table->string('role', 10);
             $table->bigInteger('partner_id');

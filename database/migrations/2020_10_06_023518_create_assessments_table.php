@@ -14,11 +14,11 @@ class CreateAssessmentsTable extends Migration
     public function up()
     {
         Schema::create('assessments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('assessment_code', 10);
             $table->string('assessment_category', 50);
             $table->string('assessment_name', 50);
-            $table->unsignedBigInteger('partner_id');
+            $table->bigInteger('partner_id');
             $table->timestamps();
         });
     }

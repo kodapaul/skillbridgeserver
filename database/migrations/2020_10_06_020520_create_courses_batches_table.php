@@ -14,10 +14,10 @@ class CreateCoursesBatchesTable extends Migration
     public function up()
     {
         Schema::create('courses_batches', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('course_id');
             $table->string('batch_code');
-            $table->unsignedBigInteger('instructor_id');
+            $table->bigInteger('instructor_id');
             $table->decimal('course_price', 18,2);
             $table->longText('course_information');
             $table->json('course_lessons');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAssessmentAnnouncementTable extends Migration
+class CreateCourseAnnouncementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateAssessmentAnnouncementTable extends Migration
      */
     public function up()
     {
-        Schema::create('assessment_announcement', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('course_batch_id');
-            $table->string('announcement', 50);
+        Schema::create('course_announcements', function (Blueprint $table) {
+            $table->increments('id');
+            $table->bigInteger('course_batch_id');
+            $table->string('announcement', 200);
+            $table->string('subject', 40);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateAssessmentAnnouncementTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assessment_announcement');
+        Schema::dropIfExists('course_announcements');
     }
 }

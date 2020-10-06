@@ -14,7 +14,7 @@ class CreateAdminIncomeTable extends Migration
     public function up()
     {
         Schema::create('admin_income', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->bigInteger('product_id');
             $table->bigInteger('user_id');
             $table->decimal('income_price', 18, 2);

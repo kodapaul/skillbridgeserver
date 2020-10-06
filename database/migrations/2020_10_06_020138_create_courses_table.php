@@ -14,11 +14,11 @@ class CreateCoursesTable extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('course_code', 10);
             $table->string('course_category', 10);
             $table->string('course_name', 10);
-            $table->unsignedBigInteger('partner_id');
+            $table->bigInteger('partner_id');
             $table->timestamps();
         });
     }

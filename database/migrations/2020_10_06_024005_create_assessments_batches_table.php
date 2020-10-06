@@ -14,10 +14,10 @@ class CreateAssessmentsBatchesTable extends Migration
     public function up()
     {
         Schema::create('assessments_batches', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('partner_id');
+            $table->increments('id');
+            $table->bigInteger('partner_id');
             $table->string('batch_code', 50);
-            $table->unsignedBigInteger('instructor_id');
+            $table->bigInteger('instructor_id');
             $table->decimal('assessment_price', 18,2);
             $table->longText('assessment_information');
             $table->string('assessment_location', 50);

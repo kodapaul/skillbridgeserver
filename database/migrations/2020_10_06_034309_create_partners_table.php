@@ -14,13 +14,12 @@ class CreatePartnersTable extends Migration
     public function up()
     {
         Schema::create('partners', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('code', 20);
             $table->string('street', 100);
             $table->string('city', 50);
             $table->string('country', 50);
             $table->string('role', 10);
-            $table->bigInteger('partner_id');
             $table->timestamps();
         });
     }
