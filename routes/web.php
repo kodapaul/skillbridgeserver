@@ -23,6 +23,17 @@ $router->group(['prefix' => 'api'], function ($router) {
     $router->post('login', 'AuthController@login');
 });
 
+$router->group(['prefix' => 'api'], function ($router) {
+    $router->get('sample', 'UserController\UserLoginController@index');
+    $router->post('login', 'UserController\UserLoginController@registerUser');
+});
+
+// $router->group(['prefix' => 'api'], function ($router) {
+//     $router->get(['as'=>'RegistrationIndex', 'uses'=>'UserController\UserLoginController@index']);
+//     $router->post(['as'=>'RegisterUser', 'uses'=>'UserController\UserLoginController@registerUser']);
+// });
+
+
 
 
 

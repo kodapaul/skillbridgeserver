@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+
 class ExampleController extends Controller
 {
     /**
@@ -13,6 +15,8 @@ class ExampleController extends Controller
     {
         //
     }
+
+   
 
     //
 }
