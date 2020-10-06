@@ -14,7 +14,7 @@ class CreateQuizzesTable extends Migration
     public function up()
     {
         Schema::create('quizzes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->bigInteger('instructor_id');
             $table->string('quiz_name', 50);
             $table->string('quiz_code', 10);

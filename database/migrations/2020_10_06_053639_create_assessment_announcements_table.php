@@ -14,7 +14,7 @@ class CreateAssessmentAnnouncementsTable extends Migration
     public function up()
     {
         Schema::create('assessment_announcements', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->bigInteger('course_batch_id');
             $table->string('announcement', 200);
             $table->timestamps();

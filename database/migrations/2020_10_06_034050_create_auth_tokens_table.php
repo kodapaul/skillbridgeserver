@@ -14,6 +14,7 @@ class CreateAuthTokensTable extends Migration
     public function up()
     {
         Schema::create('auth_tokens', function (Blueprint $table) {
+            $table->id();
             $table->longText('access_token');
             $table->longText('refresh_token');
             $table->string('user_type', 30);

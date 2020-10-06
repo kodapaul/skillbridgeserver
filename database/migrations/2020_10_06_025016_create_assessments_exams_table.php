@@ -14,7 +14,7 @@ class CreateAssessmentsExamsTable extends Migration
     public function up()
     {
         Schema::create('assessments_exams', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->bigInteger('assessment_id');
             $table->json('assessment_qa');
             $table->timestamps();

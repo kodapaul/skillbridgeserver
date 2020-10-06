@@ -14,7 +14,7 @@ class CreateSubmittablesTable extends Migration
     public function up()
     {
         Schema::create('submittables', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->bigInteger('instructor_id');
             $table->string('submittable_name', 50);
             $table->string('submittable_code', 50);

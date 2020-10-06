@@ -14,10 +14,10 @@ class CreateAssessmentsStudentsTable extends Migration
     public function up()
     {
         Schema::create('assessments_students', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->bigInteger('assessment_batch_id');
             $table->bigInteger('user_id');
-            $table->tinyint('status', 50);
+            $table->tinyInteger('status');
             $table->bigInteger('partner_id');
             $table->timestamps();
         });

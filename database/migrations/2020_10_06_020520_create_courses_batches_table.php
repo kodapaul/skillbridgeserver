@@ -14,7 +14,7 @@ class CreateCoursesBatchesTable extends Migration
     public function up()
     {
         Schema::create('courses_batches', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('course_id');
             $table->string('batch_code');
             $table->bigInteger('instructor_id');

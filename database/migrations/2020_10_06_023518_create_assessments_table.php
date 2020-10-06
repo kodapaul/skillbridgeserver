@@ -14,7 +14,7 @@ class CreateAssessmentsTable extends Migration
     public function up()
     {
         Schema::create('assessments', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('assessment_code', 10);
             $table->string('assessment_category', 50);
             $table->string('assessment_name', 50);
